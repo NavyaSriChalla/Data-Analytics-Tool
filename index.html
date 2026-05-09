@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Data Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Matrix extension for heatmap -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.1/dist/chartjs-chart-matrix.min.js"></script>
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <!-- Sidebar / AI Insights -->
+        <aside class="sidebar glass-panel">
+            <h1 class="logo">NEON <span class="purple-text">ANALYTICS</span></h1>
+            
+            <div class="upload-section">
+                <label for="csv-upload" class="upload-btn neon-btn">
+                    Upload CSV
+                </label>
+                <input type="file" id="csv-upload" accept=".csv" hidden>
+                <p id="upload-status" class="status-text">No file chosen</p>
+            </div>
+
+            <div class="controls-section hidden" id="controls-section">
+                <h3>Controls</h3>
+                <div class="control-group">
+                    <label>Search:</label>
+                    <input type="text" id="search-input" class="glass-input" placeholder="Search data...">
+                </div>
+                <div class="control-group">
+                    <label>Export:</label>
+                    <button id="export-btn" class="neon-btn purple-btn">Export CSV</button>
+                </div>
+                <div class="control-group">
+                    <label>Theme:</label>
+                    <button id="theme-toggle" class="neon-btn outline-btn">Toggle Light Mode</button>
+                </div>
+            </div>
+
+            <div class="insights-section hidden" id="insights-section">
+                <h3>AI Insights <span class="pulse"></span></h3>
+                <ul id="insights-list" class="insights-list">
+                    <!-- Insights populated via JS -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Summary Stats -->
+            <section class="stats-grid hidden" id="stats-grid">
+                <!-- Populated via JS -->
+            </section>
+
+            <!-- Interactive Table -->
+            <section class="table-section glass-panel hidden" id="table-section">
+                <div class="table-header">
+                    <h2>Data Viewer</h2>
+                    <span id="row-count"></span>
+                </div>
+                <div class="table-container">
+                    <table id="data-table">
+                        <thead>
+                            <tr id="table-head-row"></tr>
+                        </thead>
+                        <tbody id="table-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section hidden" id="charts-section">
+                
+                <div class="chart-controls glass-panel">
+                    <h3>Visualizer</h3>
+                    <div class="chart-options">
+                        <select id="chart-type" class="glass-input">
+                            <option value="bar">Bar Chart</option>
+                            <option value="pie">Pie Chart</option>
+                            <option value="line">Line Chart</option>
+                            <option value="scatter">Scatter Plot</option>
+                            <option value="heatmap">Correlation Heatmap</option>
+                        </select>
+                        <select id="x-axis" class="glass-input"><option>X-Axis</option></select>
+                        <select id="y-axis" class="glass-input"><option>Y-Axis</option></select>
+                        <button id="generate-chart-btn" class="neon-btn">Generate Chart</button>
+                    </div>
+                </div>
+
+                <div class="chart-display glass-panel">
+                    <canvas id="mainChart"></canvas>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

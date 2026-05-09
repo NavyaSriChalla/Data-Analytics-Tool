@@ -1,0 +1,16 @@
+id,date,category,product,revenue,cost,profit,quantity,region,customer_satisfaction
+1,2026-01-15,Electronics,Smartphone X,1200.00,800.00,400.00,2,North America,4.5
+2,2026-01-18,Software,Cloud Storage 1TB,120.00,20.00,100.00,1,Europe,4.8
+3,2026-01-20,Hardware,Mechanical Keyboard,150.00,70.00,80.00,3,Asia Pacific,4.2
+4,2026-02-05,Electronics,Wireless Earbuds,199.99,90.00,109.99,5,North America,4.7
+5,2026-02-12,Services,Consulting Hour,250.00,0.00,250.00,1,Europe,4.9
+6,2026-02-28,Software,Antivirus Pro,80.00,10.00,70.00,2,LATAM,4.1
+7,2026-03-10,Hardware,Gaming Mouse,85.00,40.00,45.00,4,North America,4.6
+8,2026-03-15,Electronics,4K Monitor,450.00,300.00,150.00,1,Asia Pacific,4.4
+9,2026-03-22,Services,Installation,100.00,20.00,80.00,2,Europe,4.0
+10,2026-04-05,Software,Cloud Storage 1TB,120.00,20.00,100.00,1,North America,4.8
+11,2026-04-12,Hardware,Mechanical Keyboard,150.00,70.00,80.00,2,LATAM,4.3
+12,2026-04-18,Electronics,Smartphone X,1200.00,800.00,400.00,1,Asia Pacific,4.6
+13,2026-04-25,Software,Antivirus Pro,80.00,10.00,70.00,3,Europe,4.2
+14,2026-05-02,Services,Consulting Hour,250.00,0.00,250.00,2,North America,5.0
+15,2026-05-08,Electronics,Wireless Earbuds,199.99,90.00,109.99,1,LATAM,4.5
